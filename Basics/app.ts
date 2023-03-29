@@ -1,7 +1,12 @@
-function combine(inp1: number | string, inp2: number | string, resCov: string) {
+type Combinable = number | string; //Type Aliases
+type ConversionDesc = 'as-num' | 'as-text';
+
+function combine(inp1: Combinable, inp2: Combinable, resCov: ConversionDesc) {
   let res;
   if (
-    (typeof inp1 === "number" && typeof inp2 === "number") ||resCov === "as-num") {
+    (typeof inp1 === "number" && typeof inp2 === "number") ||
+    resCov === "as-num"
+  ) {
     res = +inp1 + +inp2;
   } else {
     res = inp1.toString() + inp2.toString();
