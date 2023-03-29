@@ -15,5 +15,5 @@ const num2 = 4.6;
 const printRes = true;
 const resPhrase = "Result is: ";
 
-const result = add(num1, num2, printRes, resPhrase);
-console.log(result);
+add(num1, num2, printRes, resPhrase);
+
