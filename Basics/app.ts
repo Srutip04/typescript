@@ -1,19 +1,16 @@
-console.log("COde goes here");
-
-function add(n1: number, n2: number, showRes: boolean, phrase: string) {
-  console.log(typeof num1);
-  const res = n1 + n2;
-  if (showRes) {
-    console.log(phrase + res);
-  } else {
+function combine(inp1: number | string, inp2: number | string) {
+    let res;
+    if (typeof inp1 === 'number' && typeof inp2 === 'number') {
+        res = inp1 + inp2;
+    } else {
+        res = inp1.toString() + inp2.toString();
+    }
     return res;
-  }
-}
+} 
 
-const num1 = 3;
-const num2 = 4.6;
-const printRes = true;
-const resPhrase = "Result is: ";
+const combinedAges = combine(20, 37);
+console.log(combinedAges);
 
-add(num1, num2, printRes, resPhrase);
+const combinedNames = combine('max', 'anna');
+console.log(combinedNames);
 
