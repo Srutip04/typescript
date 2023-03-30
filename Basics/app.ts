@@ -1,28 +1,9 @@
-type Combinable = number | string; //Type Aliases
-type ConversionDesc = 'as-num' | 'as-text';
-
-function combine(inp1: Combinable, inp2: Combinable, resCov: ConversionDesc) {
-  let res;
-  if (
-    (typeof inp1 === "number" && typeof inp2 === "number") ||
-    resCov === "as-num"
-  ) {
-    res = +inp1 + +inp2;
-  } else {
-    res = inp1.toString() + inp2.toString();
-  }
-  if (resCov === "as-num") {
-    return +res;
-  } else {
-    return res.toString();
-  }
+function Add(n1: number, n2: number) {
+  return n1 + n2;
 }
 
-const combinedAges = combine(20, 37, "as-num");
-console.log(combinedAges);
+function printResult(num: number): void {
+  console.log("result" + num);
+}
 
-const combinedStirngAges = combine("26", "34", "as-num");
-console.log(combinedStirngAges);
-
-const combinedNames = combine("max", "anna", "as-text");
-console.log(combinedNames);
+printResult(add(5, 12));
